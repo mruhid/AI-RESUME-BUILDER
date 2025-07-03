@@ -52,7 +52,9 @@ async function handleSessionCompleted(session: Stripe.Checkout.Session) {
   if (!userId) {
     throw new Error("User ID is mising in session metadata");
   }
-  (await clerkClient()).users.updateUserMetadata(userId, {
+  await (
+    await clerkClient()
+  ).users.updateUserMetadata(userId, {
     privateMetadata: {
       stripeCustomerId: session.customer as string,
     },

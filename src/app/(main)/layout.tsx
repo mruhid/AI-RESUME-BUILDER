@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import { auth } from "@clerk/nextjs/server";
 import { getUserSubscriptionLevel } from "@/lib/subscriptions";
 import SubscriptionLevelProvider from "./SubscriptionLevelProvider";
+import Link from "next/link";
 
 export default async function Layout({
   children,
@@ -19,12 +20,12 @@ export default async function Layout({
         <p className="mb-6 text-lg text-muted-foreground/50">
           You must be logged in to access this page.
         </p>
-        <a
+        <Link
           href="/"
           className="rounded-lg bg-primary px-6 py-2 text-white transition hover:bg-primary/50"
         >
           Go to Home
-        </a>
+        </Link>
       </div>
     );
   }

@@ -35,7 +35,7 @@ export const TitleText = ({
     whileInView="show"
     className={cn(
       textStyle,
-      "mt-[8px] text-[40px] font-bold text-foreground/80 md:text-[64px]",
+      "mt-[8px] text-[40px] font-bold text-black md:text-[64px]",
     )}
   >
     {title}

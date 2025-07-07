@@ -9,7 +9,7 @@ import Navbar from "./Navbar";
 
 export default function HomePageElements() {
   return (
-    <div className="w-full overflow-hidden bg-gray-100">
+    <div className="w-full overflow-hidden text-black bg-gray-100">
       <Navbar />
       <div className="relative">
         <Hero />

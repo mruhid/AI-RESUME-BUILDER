@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressContentEditableWarning>
         <body className={inter.className}>
+          <NextTopLoader color="#581c87" height={4} />
           <ThemeProvider
             attribute={"class"}
             defaultTheme="system"
